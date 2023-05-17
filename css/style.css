@@ -1,0 +1,19 @@
+.iconlar{
+    font-size: 50px;
+}
+
+.fontt{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.resimSlider{
+
+    height: 700px;
+    margin-bottom: 25px;
+}
+
+.slider {
+    width: 1000px; 
+    height: 700px; 
+    overflow: hidden; 
+}
