@@ -17,3 +17,16 @@
     height: 700px; 
     overflow: hidden; 
 }
+
+.renk{
+    background-color: #DCDCDC;
+}
+
+.renk2{
+    background-color: white;
+}
+
+.ortalama{
+    margin-top: 265px;
+    margin-bottom: 265px;
+}
