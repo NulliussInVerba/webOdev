@@ -62,9 +62,9 @@ if(isset($_POST['email'])){
                 <li class="nav-item">
                     <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
                 </li>
-                <li>
-                    <a class="nav-link" href="ozgecmis.html"></a>
-                </li class="nav-item">
+                <li class="nav-item">
+                    <a class="nav-link active" href="ozgecmis.html">Özgeçmiş</a>
+                </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="login-sayfasi.php">Login</a>
                 </li>
