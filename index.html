@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
 
 
     <!-- Bootstrap CSS -->
@@ -13,16 +13,18 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    
+
     <title>Anasayfa</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
-    <!-- Menü başlangıç -->
+
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fontt">
         <a class="navbar-brand " href="#index.html">Veysel Aras</a>
@@ -47,7 +49,7 @@
             </ul>
         </div>
     </nav>
-    <!-- Menü bitiş -->
+
 
     <main class="container m-sm-auto fontt">
 
@@ -99,16 +101,59 @@
     </main>
 
 
+    <br><br><br><br>
+    <h2 class="fontt text-center">Günün Astronomi Resmi</h2>
+    <br>
+    <div class="container fontt">
+        <div id="apod-image" class="text-center"></div><br>
+        <p id="apod-title" class="text-center"></p>
+
+        <p id="apod-description" class="text-center"></p>
+
+
+        <script>
+            fetch('https://api.nasa.gov/planetary/apod?api_key=PYeURXXV4qdN867hkfRjGvemmV3knmS4rSs2cprg')
+                .then(response => response.json())
+                .then(data => {
+                    const apodImage = document.getElementById('apod-image');
+                    const apodTitle = document.getElementById('apod-title');
+                    const apodDescription = document.getElementById('apod-description');
+
+                    if (data.media_type === 'image') {
+                        apodImage.innerHTML = `<img src="${data.url}" alt="Astronomi Resmi">`;
+                    } else if (data.media_type === 'video') {
+                        apodImage.innerHTML = `<iframe width="560" height="315" src="${data.url}" frameborder="0" allowfullscreen></iframe>`;
+                    }
+
+                    apodTitle.textContent = data.title;
+                    apodDescription.textContent = data.explanation;
+                })
+                .catch(error => {
+                    console.error('API isteği başarısız:', error);
+                });
+        </script>
+
+    </div>
+
+
+
+
 
     <footer class="bg-dark p-5 text-white text-center mt-5">
-        <a href="https://www.instagram.com/elonmusk/?hl=en" target="_blank"><i class="fab fa-instagram iconlar mx-3" style="color: #ffffff;"></i></a>
-        <a href="https://www.facebook.com/zuck/" target="_blank"><i class="fab fa-facebook iconlar mx-3"style="color: #ffffff;"></i></a>
-        <a href="https://twitter.com/elonmusk?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter-square iconlar mx-3" style="color: #ffffff;"></i></a>
+        <a href="https://www.instagram.com/elonmusk/?hl=en" target="_blank"><i class="fab fa-instagram iconlar mx-3"
+                style="color: #ffffff;"></i></a>
+        <a href="https://www.facebook.com/zuck/" target="_blank"><i class="fab fa-facebook iconlar mx-3"
+                style="color: #ffffff;"></i></a>
+        <a href="https://twitter.com/elonmusk?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+                class="fab fa-twitter-square iconlar mx-3" style="color: #ffffff;"></i></a>
+
+
+
     </footer>
 
 
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
