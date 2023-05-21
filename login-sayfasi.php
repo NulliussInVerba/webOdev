@@ -63,7 +63,7 @@ if(isset($_POST['email'])){
                     <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="ozgecmis.html">Özgeçmiş</a>
+                    <a class="nav-link " href="ozgecmis.html">Özgeçmiş</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="login-sayfasi.php">Login</a>
