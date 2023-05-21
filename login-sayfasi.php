@@ -39,7 +39,7 @@ if(isset($_POST['email'])){
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <title>Hello, world!</title>
+    <title>Login Sayfasi</title>
 </head>
 
 <body class="fontt renk">
